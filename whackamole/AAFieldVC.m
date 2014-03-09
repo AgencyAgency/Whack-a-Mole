@@ -14,9 +14,18 @@
 @property (assign, nonatomic) CGPoint moleDirection;
 
 @property (strong, nonatomic) CADisplayLink *displayLink;
+@property (strong, nonatomic) NSMutableDictionary *behaviors;
 @end
 
 @implementation AAFieldVC
+
+- (NSMutableDictionary *)behaviors
+{
+    if (!_behaviors) {
+        _behaviors = [NSMutableDictionary dictionary];
+    }
+    return _behaviors;
+}
 
 - (void)viewDidLoad
 {
@@ -55,6 +64,7 @@
     flickBehavior.magnitude = 0.1f;
     
     [self.animator addBehavior:flickBehavior];
+    self.behaviors[[AAMole keyValueForMole:mole]] = flickBehavior;
 }
 
 - (IBAction)handleFieldTap:(UITapGestureRecognizer *)sender
@@ -113,6 +123,11 @@
 - (void)removeDeadMoles:(NSArray *)deadMoles
 {
     for (AAMole *mole in deadMoles) {
+        NSValue *key = [AAMole keyValueForMole:mole];
+        UIDynamicBehavior *behavior = self.behaviors[key];
+        [self.animator removeBehavior:behavior];
+        [self.behaviors removeObjectForKey:key];
+        
         [mole removeFromSuperview];
     }
 }

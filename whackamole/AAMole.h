@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AAMole : UIButton
++ (NSValue *)keyValueForMole:(AAMole *)mole;
 - (id)initAtLocation:(CGPoint)location;
 - (BOOL)isInPlayingField;
 @end

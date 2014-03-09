@@ -10,6 +10,11 @@
 
 @implementation AAMole
 
++ (NSValue *)keyValueForMole:(AAMole *)mole
+{
+    return [NSValue valueWithPointer:(__bridge const void *)(mole)];
+}
+
 - (id)initAtLocation:(CGPoint)location
 {
     CGRect frame = CGRectMake(0.0, 0.0, 20.0, 20.0);
