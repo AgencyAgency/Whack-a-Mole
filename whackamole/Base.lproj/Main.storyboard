@@ -24,6 +24,14 @@
                                     <segue destination="BYZ-38-t0r" kind="embed" id="XlB-sC-ZoX"/>
                                 </connections>
                             </containerView>
+                            <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nPI-pk-bgL">
+                                <rect key="frame" x="513" y="0.0" width="512" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="vDF-bm-Zeg" kind="embed" id="uoH-2R-1bh"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -55,7 +63,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="point" keyPath="moleDirection">
-                            <point key="value" x="0.0" y="1"/>
+                            <point key="value" x="0.0" y="-1"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </viewController>
@@ -66,7 +74,41 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="106" y="-345"/>
+            <point key="canvasLocation" x="225" y="-859"/>
+        </scene>
+        <!--FieldVC-->
+        <scene sceneID="mKh-yE-U61">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="vDF-bm-Zeg" customClass="AAFieldVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZCZ-vR-hac"/>
+                        <viewControllerLayoutGuide type="bottom" id="ORJ-K6-Iy4"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cuj-Kx-0nB" customClass="AAFieldView">
+                        <rect key="frame" x="0.0" y="0.0" width="512" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.50196081399917603" green="0.25098040699958801" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1lI-2x-j2G" appends="YES" id="FzQ-Nx-OnS"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="moleDirection">
+                            <point key="value" x="0.0" y="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mm1-c5-t5Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1lI-2x-j2G">
+                    <connections>
+                        <action selector="handleFieldTap:" destination="vDF-bm-Zeg" id="eld-4i-1i4"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="217" y="66"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
