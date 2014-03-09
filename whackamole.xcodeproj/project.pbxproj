@@ -22,6 +22,7 @@
 		CF66982A18CC30A800E2388B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF66982818CC30A800E2388B /* InfoPlist.strings */; };
 		CF66982C18CC30A800E2388B /* whackamoleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF66982B18CC30A800E2388B /* whackamoleTests.m */; };
 		CF66983718CC326B00E2388B /* AAFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF66983618CC326B00E2388B /* AAFieldView.m */; };
+		CF66983A18CC40BC00E2388B /* AAMole.m in Sources */ = {isa = PBXBuildFile; fileRef = CF66983918CC40BC00E2388B /* AAMole.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		CF66982B18CC30A800E2388B /* whackamoleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = whackamoleTests.m; sourceTree = "<group>"; };
 		CF66983518CC326B00E2388B /* AAFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAFieldView.h; sourceTree = "<group>"; };
 		CF66983618CC326B00E2388B /* AAFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAFieldView.m; sourceTree = "<group>"; };
+		CF66983818CC40BC00E2388B /* AAMole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAMole.h; sourceTree = "<group>"; };
+		CF66983918CC40BC00E2388B /* AAMole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAMole.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				CF66983618CC326B00E2388B /* AAFieldView.m */,
 				CF66981518CC30A800E2388B /* AAViewController.h */,
 				CF66981618CC30A800E2388B /* AAViewController.m */,
+				CF66983818CC40BC00E2388B /* AAMole.h */,
+				CF66983918CC40BC00E2388B /* AAMole.m */,
 				CF66981818CC30A800E2388B /* Images.xcassets */,
 				CF66980718CC30A800E2388B /* Supporting Files */,
 			);
@@ -257,6 +262,7 @@
 			files = (
 				CF66981118CC30A800E2388B /* AAAppDelegate.m in Sources */,
 				CF66983718CC326B00E2388B /* AAFieldView.m in Sources */,
+				CF66983A18CC40BC00E2388B /* AAMole.m in Sources */,
 				CF66981718CC30A800E2388B /* AAViewController.m in Sources */,
 				CF66980D18CC30A800E2388B /* main.m in Sources */,
 			);
