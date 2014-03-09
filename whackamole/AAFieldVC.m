@@ -40,9 +40,7 @@
 
 - (void)addMoleAtLocation:(CGPoint)location
 {
-    CGRect frame = CGRectMake(0.0, 0.0, 20.0, 20.0);
-    AAMole *mole = [[AAMole alloc] initWithFrame:frame];
-    mole.center = location;
+    AAMole *mole = [[AAMole alloc] initAtLocation:location];
     [self.view addSubview:mole];
     [self flickMole:mole];
 }

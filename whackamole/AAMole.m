@@ -10,11 +10,13 @@
 
 @implementation AAMole
 
-- (id)initWithFrame:(CGRect)frame
+- (id)initAtLocation:(CGPoint)location
 {
+    CGRect frame = CGRectMake(0.0, 0.0, 20.0, 20.0);
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        self.center = location;
         self.backgroundColor = [UIColor redColor];
     }
     return self;
