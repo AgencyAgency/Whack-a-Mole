@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AAMole : UIButton
-
+- (BOOL)isInPlayingField;
 @end

@@ -93,14 +93,30 @@
 {
     NSLog(@"behaviors added: %i", [[self.animator behaviors] count]);
     
+    NSMutableArray *deadMoles = [NSMutableArray array];
     NSUInteger moleCount = 0;
     for (UIView *subview in self.view.subviews) {
         if ([subview isKindOfClass:[AAMole class]]) {
+            AAMole *mole = (AAMole *)subview;
             moleCount++;
+            if (![mole isInPlayingField]) {
+                [deadMoles addObject:mole];
+            }
         }
     }
     NSLog(@"moles added: %i", moleCount);
+    
+    [self removeDeadMoles:deadMoles];
 }
 
+
+# pragma mark - Moles
+
+- (void)removeDeadMoles:(NSArray *)deadMoles
+{
+    for (AAMole *mole in deadMoles) {
+        [mole removeFromSuperview];
+    }
+}
 
 @end

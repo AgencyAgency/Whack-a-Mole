@@ -29,4 +29,10 @@
 }
 */
 
+- (BOOL)isInPlayingField
+{
+    if (!self.superview) return NO;
+    return CGRectIntersectsRect(self.superview.bounds, self.frame);
+}
+
 @end
