@@ -12,6 +12,8 @@
 @interface AAFieldVC ()
 @property (strong, nonatomic) UIDynamicAnimator *animator;
 @property (assign, nonatomic) CGPoint moleDirection;
+
+@property (strong, nonatomic) CADisplayLink *displayLink;
 @end
 
 @implementation AAFieldVC
@@ -23,6 +25,17 @@
     
     // Add animator:
     self.animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self startTickerLoop];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [self.displayLink invalidate];
+    self.displayLink = nil;
 }
 
 - (void)addMoleAtLocation:(CGPoint)location
@@ -44,14 +57,49 @@
     flickBehavior.magnitude = 0.1f;
     
     [self.animator addBehavior:flickBehavior];
-    
-    NSLog(@"behaviors added: %i", [[self.animator behaviors] count]);
 }
 
 - (IBAction)handleFieldTap:(UITapGestureRecognizer *)sender
 {
     NSLog(@"tap");
     [self addMoleAtLocation:[sender locationInView:self.view]];
+}
+
+#pragma mark - Display Link Tick-Tock
+
+- (CADisplayLink *)displayLink{
+    if (!_displayLink) {
+        _displayLink = [CADisplayLink displayLinkWithTarget:self
+                                                   selector:@selector(tick:)];
+        _displayLink.frameInterval = 60;
+        [_displayLink addToRunLoop:[NSRunLoop currentRunLoop]
+                           forMode:NSDefaultRunLoopMode];
+        _displayLink.paused = YES;
+    }
+    return _displayLink;
+}
+
+- (void)startTickerLoop
+{
+    self.displayLink.paused = NO;
+}
+
+- (void)stopTickerLoop
+{
+    self.displayLink.paused = YES;
+}
+
+- (void)tick:(CADisplayLink *)sender
+{
+    NSLog(@"behaviors added: %i", [[self.animator behaviors] count]);
+    
+    NSUInteger moleCount = 0;
+    for (UIView *subview in self.view.subviews) {
+        if ([subview isKindOfClass:[AAMole class]]) {
+            moleCount++;
+        }
+    }
+    NSLog(@"moles added: %i", moleCount);
 }
 
 
