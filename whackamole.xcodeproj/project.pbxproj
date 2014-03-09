@@ -14,7 +14,7 @@
 		CF66980D18CC30A800E2388B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF66980C18CC30A800E2388B /* main.m */; };
 		CF66981118CC30A800E2388B /* AAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF66981018CC30A800E2388B /* AAAppDelegate.m */; };
 		CF66981418CC30A800E2388B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF66981218CC30A800E2388B /* Main.storyboard */; };
-		CF66981718CC30A800E2388B /* AAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF66981618CC30A800E2388B /* AAViewController.m */; };
+		CF66981718CC30A800E2388B /* AAFieldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF66981618CC30A800E2388B /* AAFieldVC.m */; };
 		CF66981918CC30A800E2388B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF66981818CC30A800E2388B /* Images.xcassets */; };
 		CF66982018CC30A800E2388B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF66981F18CC30A800E2388B /* XCTest.framework */; };
 		CF66982118CC30A800E2388B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF66980018CC30A800E2388B /* Foundation.framework */; };
@@ -47,8 +47,8 @@
 		CF66980F18CC30A800E2388B /* AAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAAppDelegate.h; sourceTree = "<group>"; };
 		CF66981018CC30A800E2388B /* AAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAAppDelegate.m; sourceTree = "<group>"; };
 		CF66981318CC30A800E2388B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CF66981518CC30A800E2388B /* AAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAViewController.h; sourceTree = "<group>"; };
-		CF66981618CC30A800E2388B /* AAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAViewController.m; sourceTree = "<group>"; };
+		CF66981518CC30A800E2388B /* AAFieldVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAFieldVC.h; sourceTree = "<group>"; };
+		CF66981618CC30A800E2388B /* AAFieldVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAFieldVC.m; sourceTree = "<group>"; };
 		CF66981818CC30A800E2388B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CF66981E18CC30A800E2388B /* whackamoleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whackamoleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF66981F18CC30A800E2388B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -123,8 +123,8 @@
 				CF66981218CC30A800E2388B /* Main.storyboard */,
 				CF66983518CC326B00E2388B /* AAFieldView.h */,
 				CF66983618CC326B00E2388B /* AAFieldView.m */,
-				CF66981518CC30A800E2388B /* AAViewController.h */,
-				CF66981618CC30A800E2388B /* AAViewController.m */,
+				CF66981518CC30A800E2388B /* AAFieldVC.h */,
+				CF66981618CC30A800E2388B /* AAFieldVC.m */,
 				CF66983818CC40BC00E2388B /* AAMole.h */,
 				CF66983918CC40BC00E2388B /* AAMole.m */,
 				CF66981818CC30A800E2388B /* Images.xcassets */,
@@ -263,7 +263,7 @@
 				CF66981118CC30A800E2388B /* AAAppDelegate.m in Sources */,
 				CF66983718CC326B00E2388B /* AAFieldView.m in Sources */,
 				CF66983A18CC40BC00E2388B /* AAMole.m in Sources */,
-				CF66981718CC30A800E2388B /* AAViewController.m in Sources */,
+				CF66981718CC30A800E2388B /* AAFieldVC.m in Sources */,
 				CF66980D18CC30A800E2388B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

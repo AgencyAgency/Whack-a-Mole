@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AAViewController : UIViewController
+@interface AAFieldVC : UIViewController
 
 @end

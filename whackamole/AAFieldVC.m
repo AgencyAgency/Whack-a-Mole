@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 AgencyAgency. All rights reserved.
 //
 
-#import "AAViewController.h"
+#import "AAFieldVC.h"
 #import "AAMole.h"
 
-@interface AAViewController ()
+@interface AAFieldVC ()
 @property (strong, nonatomic) UIDynamicAnimator *animator;
 @end
 
-@implementation AAViewController
+@implementation AAFieldVC
 
 - (void)viewDidLoad
 {
