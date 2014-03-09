@@ -21,6 +21,7 @@
 		CF66982218CC30A800E2388B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF66980418CC30A800E2388B /* UIKit.framework */; };
 		CF66982A18CC30A800E2388B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF66982818CC30A800E2388B /* InfoPlist.strings */; };
 		CF66982C18CC30A800E2388B /* whackamoleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF66982B18CC30A800E2388B /* whackamoleTests.m */; };
+		CF66983718CC326B00E2388B /* AAFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF66983618CC326B00E2388B /* AAFieldView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		CF66982718CC30A800E2388B /* whackamoleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "whackamoleTests-Info.plist"; sourceTree = "<group>"; };
 		CF66982918CC30A800E2388B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CF66982B18CC30A800E2388B /* whackamoleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = whackamoleTests.m; sourceTree = "<group>"; };
+		CF66983518CC326B00E2388B /* AAFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAFieldView.h; sourceTree = "<group>"; };
+		CF66983618CC326B00E2388B /* AAFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAFieldView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				CF66980F18CC30A800E2388B /* AAAppDelegate.h */,
 				CF66981018CC30A800E2388B /* AAAppDelegate.m */,
 				CF66981218CC30A800E2388B /* Main.storyboard */,
+				CF66983518CC326B00E2388B /* AAFieldView.h */,
+				CF66983618CC326B00E2388B /* AAFieldView.m */,
 				CF66981518CC30A800E2388B /* AAViewController.h */,
 				CF66981618CC30A800E2388B /* AAViewController.m */,
 				CF66981818CC30A800E2388B /* Images.xcassets */,
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF66981118CC30A800E2388B /* AAAppDelegate.m in Sources */,
+				CF66983718CC326B00E2388B /* AAFieldView.m in Sources */,
 				CF66981718CC30A800E2388B /* AAViewController.m in Sources */,
 				CF66980D18CC30A800E2388B /* main.m in Sources */,
 			);
