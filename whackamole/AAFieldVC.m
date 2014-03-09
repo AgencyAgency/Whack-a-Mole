@@ -11,6 +11,7 @@
 
 @interface AAFieldVC ()
 @property (strong, nonatomic) UIDynamicAnimator *animator;
+@property (assign, nonatomic) CGPoint moleDirection;
 @end
 
 @implementation AAFieldVC
@@ -36,7 +37,8 @@
 - (void)flickMole:(AAMole *)mole
 {
     UIPushBehavior *flickBehavior = [[UIPushBehavior alloc] initWithItems:@[mole] mode:UIPushBehaviorModeInstantaneous];
-    flickBehavior.pushDirection = CGVectorMake(0.0, -1.0);
+    CGPoint moleDirection = [[self valueForKey:@"moleDirection"] CGPointValue];
+    flickBehavior.pushDirection = CGVectorMake(moleDirection.x, moleDirection.y);
     
     // Must set magnitude *after* setting direction:
     flickBehavior.magnitude = 0.1f;
