@@ -50,6 +50,7 @@
 - (void)addMoleAtLocation:(CGPoint)location
 {
     AAMole *mole = [[AAMole alloc] initAtLocation:location];
+    mole.delegate = self;
     [self.view addSubview:mole];
     [self flickMole:mole];
 }
@@ -61,7 +62,7 @@
     flickBehavior.pushDirection = CGVectorMake(moleDirection.x, moleDirection.y);
     
     // Must set magnitude *after* setting direction:
-    flickBehavior.magnitude = 0.1f;
+    flickBehavior.magnitude = 0.5f;
     
     [self.animator addBehavior:flickBehavior];
     self.behaviors[[AAMole keyValueForMole:mole]] = flickBehavior;
@@ -130,6 +131,13 @@
         
         [mole removeFromSuperview];
     }
+}
+
+#pragma mark - Mole Delegates
+
+- (void)hasBeenWhacked:(AAMole *)mole
+{
+    [self removeDeadMoles:@[mole]];
 }
 
 @end

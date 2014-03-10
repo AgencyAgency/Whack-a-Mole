@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AAMoleDelegate.h"
 
-@interface AAFieldVC : UIViewController
+@interface AAFieldVC : UIViewController <AAMoleDelegate>
 
 @end

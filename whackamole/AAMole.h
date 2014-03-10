@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AAMoleDelegate.h"
 
-@interface AAMole : UIButton
+@interface AAMole : UIView
+
+@property (weak, nonatomic) id<AAMoleDelegate> delegate;
+
 + (NSValue *)keyValueForMole:(AAMole *)mole;
 - (id)initAtLocation:(CGPoint)location;
 - (BOOL)isInPlayingField;

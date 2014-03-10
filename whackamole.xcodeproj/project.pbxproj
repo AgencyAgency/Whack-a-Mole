@@ -59,6 +59,7 @@
 		CF66983618CC326B00E2388B /* AAFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAFieldView.m; sourceTree = "<group>"; };
 		CF66983818CC40BC00E2388B /* AAMole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAMole.h; sourceTree = "<group>"; };
 		CF66983918CC40BC00E2388B /* AAMole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAMole.m; sourceTree = "<group>"; };
+		CF66983E18CD374B00E2388B /* AAMoleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAMoleDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +128,7 @@
 				CF66981618CC30A800E2388B /* AAFieldVC.m */,
 				CF66983818CC40BC00E2388B /* AAMole.h */,
 				CF66983918CC40BC00E2388B /* AAMole.m */,
+				CF66983E18CD374B00E2388B /* AAMoleDelegate.h */,
 				CF66981818CC30A800E2388B /* Images.xcassets */,
 				CF66980718CC30A800E2388B /* Supporting Files */,
 			);
@@ -475,6 +477,7 @@
 				CF66983118CC30A800E2388B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF66983218CC30A800E2388B /* Build configuration list for PBXNativeTarget "whackamoleTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +486,7 @@
 				CF66983418CC30A800E2388B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
